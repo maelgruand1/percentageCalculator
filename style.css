@@ -1,0 +1,193 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Titre */
+h1 {
+    font-size: 2.2rem;
+    color: #2E7D32;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+/* Calculator Container */
+.calculator {
+    max-width: 420px;
+    width: 100%;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+/* Inputs et labels */
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2E7D32;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.4);
+}
+
+/* Alignement du champ de taxe avec le pourcentage */
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.input-group input {
+    flex: 1;
+}
+
+.input-group span {
+    margin-left: 8px;
+    font-weight: bold;
+    color: #2E7D32;
+}
+
+/* Bouton */
+button {
+    padding: 14px 26px;
+    background-color: #2E7D32;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
+}
+
+button:hover {
+    background-color: #1B5E20;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(46, 125, 50, 0.3);
+}
+
+button:active {
+    background-color: #0D3D14;
+    transform: translateY(1px);
+}
+
+/* Result Display */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1B5E20;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Petits écrans (téléphones) */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .calculator {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input[type="text"] {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    #result {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablettes */
+@media screen and (max-width: 900px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Grands écrans */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 60%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
